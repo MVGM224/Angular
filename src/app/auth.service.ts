@@ -11,4 +11,8 @@ export class AuthService {
   submit(data: any){
     return this.http.post<any>( 'https://reqres.in/api/login', data)
   }
+
+  getdata1(pageno: string){
+    return this.http.get<any>( 'https://reqres.in/api/users?page='+pageno);
+  }
 }

@@ -33,6 +33,5 @@ export class LoginComponent implements OnInit {
   }
   cancel() {
     this.login.reset();
-
   }
 }
