@@ -1,0 +1,19 @@
+/* pagination styling */
+tr, th, td{
+  text-align: center;
+  border-color: black;
+  border: 1px solid;
+  border-collapse: collapse;
+
+}
+.pagination_section a {
+  color: blue;
+  padding: 10px 18px;
+  text-decoration: none;
+}
+
+/* pagination hover effect on non-active */
+.pagination_section a:hover:not(.active) {
+  background-color: #031F3B;
+  color: white;
+}

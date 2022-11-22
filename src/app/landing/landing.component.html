@@ -1,6 +1,6 @@
-<table style="width:100%">
+<table class="table">
   <tr>
-    <th>PERSON ID 1</th>
+    <th>PERSON ID</th>
     <th>FIRST NAME</th>
     <th>LAST NAME</th>
     <th>EMAIL</th>
@@ -13,6 +13,14 @@
     <td>{{item.email}}</td>
     <td><img [src]="item.avatar"></td>
     </tr>
-</table>
+</table><br>
+<div class="pagination_section">
+  <a href="javascript:void(0)">  Previous</a>
+  <a (click)="get('1')">1</a>
+  <a (click)="get('2')">2</a>
+  <a href="javascript:void(0)">Next </a>
+</div>
+
+
 
 
