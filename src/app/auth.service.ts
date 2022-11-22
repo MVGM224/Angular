@@ -15,4 +15,8 @@ export class AuthService {
   getdata1(pageno: string){
     return this.http.get<any>( 'https://reqres.in/api/users?page='+pageno);
   }
+  delete1(id: string)
+  {
+    return this.http.delete(`https://reqres.in/api/users/` + id);
+  }
 }

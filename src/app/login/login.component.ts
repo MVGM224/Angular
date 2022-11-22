@@ -23,13 +23,14 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
   submit() {
-    if(this.login.valid){
-      this.AuthService.submit(this.login.value).subscribe(
-        res=>console.log(res)
-      )
-      this.router.navigate(['/landing']);
+    if (this.login.valid) {
+      this.AuthService.submit(this.login.value).subscribe((res) => {
+        console.log(res);
+        localStorage.setItem("username", this.login.value["username"]);
+        localStorage.setItem("password", this.login.value["password"]);
+        this.router.navigate(['/landing']);
+      });
     }
-
   }
   cancel() {
     this.login.reset();
