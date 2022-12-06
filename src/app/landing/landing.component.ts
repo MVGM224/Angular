@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class LandingComponent implements OnInit { table: any[] = [];
   selectedPage!: string;
+  name:any;
 
   constructor(
     private AuthService: AuthService,
@@ -18,6 +19,7 @@ export class LandingComponent implements OnInit { table: any[] = [];
 
   ngOnInit(): void {
     this.getmethod('1');
+    
   }
   logout() {
     localStorage.clear();
@@ -35,9 +37,15 @@ export class LandingComponent implements OnInit { table: any[] = [];
     this.table.splice(item , 1);
   }
 
-  // finduser(id: string){
-  //   this.AuthService.getbyid(id).subscribe((res)=>{
-  //     console.log(res);
-  //   })
-  // }
-}
+  search(){
+    if(this.name=="")
+    this.ngOnInit();
+    else
+    this.table=this.table.filter(res=>{
+      return res.name.match(this.name)
+    })
+    
+    }
+  }
+
+

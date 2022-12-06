@@ -19,4 +19,9 @@ export class AuthService {
   {
     return this.http.delete(`https://reqres.in/api/users/` + id);
   }
+
+  find(num: number){
+    return this.http.get<any>( 'https://reqres.in/api/users/'+num);
+  }
+
 }
