@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class LandingComponent implements OnInit { table: any[] = [];
   selectedPage!: string;
-  name:any;
+  searchtext:any;
 
   constructor(
     private AuthService: AuthService,
@@ -38,12 +38,6 @@ export class LandingComponent implements OnInit { table: any[] = [];
   }
 
   search(){
-    if(this.name=="")
-    this.ngOnInit();
-    else
-    this.table=this.table.filter(res=>{
-      return res.name.match(this.name)
-    })
     
     }
   }

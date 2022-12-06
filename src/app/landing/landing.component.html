@@ -1,4 +1,4 @@
-<input type="text" placeholder="Search ID..."  (keyup)="search()">
+<input type="text" placeholder="Search ID..." [(ngModel)]="searchtext">
 
 <table>
   <thead>
@@ -12,13 +12,13 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let page of table ,let i=index">
+    <tr *ngFor="let page of table | search: searchtext ,let i=index ">
       <td>{{page.id}}</td>
       <td>{{page.email}}</td>
       <td>{{page.first_name}}</td>
       <td>{{page.last_name}}</td>
       <td><img [src] = "page.avatar" alt="userimg"></td>
-      <td><button (click)="delete(i)">Delete</button></td>
+      <!-- <td><button (click)="delete(i)">Delete</button></td> -->
     </tr>
   </tbody>
 </table>

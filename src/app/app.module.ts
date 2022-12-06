@@ -7,12 +7,14 @@ import { LoginComponent } from './login/login.component';
 import { LandingComponent } from './landing/landing.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    LandingComponent
+    LandingComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
