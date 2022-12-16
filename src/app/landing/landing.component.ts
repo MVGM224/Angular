@@ -38,8 +38,8 @@ export class LandingComponent implements OnInit { table: any[] = [];
   }
 
   search(){
+    return this.table.filter(x=>x==this.searchtext)
     
-    }
-  }
-
+    
+  }}
 
